@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('https://images.unsplash.com/photo-1615791287388-6f1bd87ace4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bookSearch{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 150px;
+    
+}
+
+input{
+    width: 350px;
+    height: 50px;
+    padding: 15px;
+    font-size: 16px;
+    display: block;
+}
+
+.searchBtn{
+    width: 100px;
+    height: 50px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.searchBtn:hover{
+    cursor: pointer;
+}
+
+table tr th{
+   background-color: rgba(153, 117, 78, 0.7);
+   padding: 20px;
+}
+
+table{
+    width: 90%;
+    margin: auto;
+    color: #fff;
+    margin-top: 100px;
+}
+
+.data{
+    text-align: center;
+    background-color: rgba(233, 183, 129, 0.5);
+    padding: 10px;
+}
+
+h2{
+    text-align: center;
+    margin-top: 100px;
+}
+
+tbody{
+  margin-top: 20px;
+}
+.pageNum{
+  padding: 7px;
+}
+.pageNum:hover{
+    cursor: pointer;
+  }
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}

@@ -1,0 +1,40 @@
+*{
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    margin-bottom: 20px;
+    margin-left: 250px;
+   
+}
+
+.all{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+}
+
+.list1{
+    list-style-type: none;
+    font-weight: bold;
+}
+.list2{
+    list-style-type: none;
+} 
+.second{
+    width: 900px;
+    margin-left: 200px;
+}
+.first{
+    width: 200px;
+    margin-left: 100px;
+    
+
+
+}
+
