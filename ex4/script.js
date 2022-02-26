@@ -1,5 +1,4 @@
-const first = document.querySelector('.first');
-const second = document.querySelector('.second');
+const secondList = document.querySelector('.second');
 
 
 fetch("https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87abe").then((res)=>{
@@ -14,7 +13,7 @@ fetch("https://ghibliapi.herokuapp.com/films/2baf70d1-42bb-4437-b551-e5fed5a87ab
         const li =  document.createElement('li');
         li.innerText = key;
         li.classList = "list2";
-        second.appendChild(li);
+        secondList.appendChild(li);
     })
     
 })
