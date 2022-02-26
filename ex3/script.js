@@ -20,7 +20,7 @@ button.addEventListener("click", (e)=>{
     
     }
     
-    fetch(` ${url+input.value}`).then((res)=>{
+    fetch(`${url+input.value}`).then((res)=>{
         return res.json();
         }).then((r)=>{
             
