@@ -17,6 +17,10 @@ body{
     
 }
 
+form{
+    display: flex;
+}
+
 input{
     width: 350px;
     height: 50px;
