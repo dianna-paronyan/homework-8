@@ -1,9 +1,6 @@
 const input = document.querySelector("input");
 const button = document.querySelector(".searchBtn");
 const searchRes = document.querySelector('.searchResults')
-const authorList = document.querySelector(".author");
-const titleList = document.querySelector(".title");
-const publishYearList = document.querySelector(".publishYear");
 const tbody = document.querySelector("tbody");
 const pagination = document.querySelector(".pagination");
 
