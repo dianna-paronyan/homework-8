@@ -24,33 +24,33 @@ function bookFounder(){
 
     }).then((r)=>{
             
-            console.log(r);
-            tbody.innerHTML = "";
-            r.docs.forEach((el)=>{
-                let listValues = [el.title, el.author_name, el.first_publish_year, el.subject];
-                let tr = document.createElement("tr");
-                listValues.forEach((val)=>{
-                    let td = document.createElement("td");
-                            let attr = document.createAttribute('class');
-                            attr.value = 'data';
-                            td.setAttributeNode(attr);
-                            td.innerText = val;
-                            tr.appendChild(td);
- 
-                })
-        
-                tbody.appendChild(tr)
-        
+        console.log(r);
+        tbody.innerHTML = "";
+        r.docs.forEach((el)=>{
+            let listValues = [el.title, el.author_name, el.first_publish_year, el.subject];
+            let tr = document.createElement("tr");
+            listValues.forEach((val)=>{
+                let td = document.createElement("td");
+                let attr = document.createAttribute('class');
+                attr.value = 'data';
+                td.setAttributeNode(attr);
+                td.innerText = val;
+                tr.appendChild(td);
+                    
             })
-
-            searchRes.innerText =`Search resaults are equal ${r.numFound}`;
-            searchRes.style.color = '#fff';
-
-            let pages = Math.ceil(r.numFound/100)
-            pagination.innerHTML = '';
-            paginate(pages);
-       
+        
+            tbody.appendChild(tr)
+        
         })
+
+        searchRes.innerText =`Search resaults are equal ${r.numFound}`;
+        searchRes.style.color = '#fff';
+
+        let pages = Math.ceil(r.numFound/100)
+        pagination.innerHTML = '';
+        paginate(pages);
+       
+    })
 
 }
 
@@ -62,40 +62,39 @@ function paginate(pages){
         pageNumber.innerText = i;
         pageNumber.addEventListener('click',(e)=>{
           
-            if(i === 1){
+        if(i === 1){
 
-                bookFounder()
+            bookFounder()
                         
-            }else  {
+        }else  {
                
-                fetch(`http://openlibrary.org/search.json?q=${input.value}&page=${e.target.innerText}`).then((res)=>{
+            fetch(`http://openlibrary.org/search.json?q=${input.value}&page=${e.target.innerText}`).then((res)=>{
 
-                    return res.json();
+                return res.json();
 
-                }).then((res)=>{
-                            console.log(res);
-                            tbody.innerHTML = "";
-                            res.docs.forEach((el)=>{
-                                let listValues = [el.title, el.author_name, el.first_publish_year, el.subject];
-                                let tr = document.createElement("tr");
-                                listValues.forEach((val)=>{
-                                    let td = document.createElement("td");
-                                    let attr = document.createAttribute('class');
-                                    attr.value = 'data';
-                                    td.setAttributeNode(attr)
-                                    td.innerText = val;
-                                    tr.appendChild(td);
-                                    tbody.appendChild(tr)
-                                })
-                            })
+            }).then((res)=>{
+                console.log(res);
+                tbody.innerHTML = "";
+                res.docs.forEach((el)=>{
+                    let listValues = [el.title, el.author_name, el.first_publish_year, el.subject];
+                    let tr = document.createElement("tr");
+
+                    listValues.forEach((val)=>{
+                        let td = document.createElement("td");
+                        let attr = document.createAttribute('class');
+                        attr.value = 'data';
+                        td.setAttributeNode(attr)
+                        td.innerText = val;
+                        tr.appendChild(td);
+                        tbody.appendChild(tr)
+                    })
+                })
     
-                        })
+            })
                 
-            }
-             
-
+        }
         })
      
         pagination.append(pageNumber);
-      }
+    }
 }
