@@ -68,7 +68,7 @@ function paginate(pages){
                         
             }else  {
                
-                fetch(`http://openlibrary.org/search.json?q=&page=${e.target.value}`).then((res)=>{
+                fetch(`http://openlibrary.org/search.json?q=${input.value}&page=${e.target.innerText}`).then((res)=>{
 
                     return res.json();
 
