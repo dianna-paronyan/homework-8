@@ -7,7 +7,6 @@ const pagination = document.querySelector(".pagination");
 let spaces  = input.value.replaceAll(" ", "+");
 let url = `http://openlibrary.org/search.json?q=${spaces}`;
 
-
 button.addEventListener("click", (e)=>{
     e.preventDefault();
 
@@ -33,7 +32,6 @@ function bookFounder(){
                 td.setAttributeNode(attr);
                 td.innerText = val;
                 tr.appendChild(td);
-                    
             })
         
             tbody.appendChild(tr)
@@ -61,7 +59,7 @@ function paginate(pages){
           
         if(i === 1){
 
-            bookFounder()
+            bookFounder();
                         
         }else  {
                
