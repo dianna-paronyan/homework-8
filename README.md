@@ -10,8 +10,8 @@ ex4: Film_API;
 
 **BUILT WITH**
 
--HTML
+- HTML
 
--CSS
+- CSS
 
--JAVASCRIPT
+- JAVASCRIPT
